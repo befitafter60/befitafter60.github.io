@@ -1,127 +1,85 @@
-/* Be Fit After 60 — site styles. Large, high-contrast type for readers 60+. */
-:root{
-  --teal:#1E5B57; --teal-dark:#143F3C; --teal-soft:#E6F0EE;
-  --sun:#F2A541; --sun-soft:#FDF1DE;
-  --ink:#1A2E2C; --muted:#4A5B59; --line:#D5DEDC; --bg:#FFFFFF; --cream:#FAF7F1;
-  --radius:14px; --max:1120px;
-}
+/* Be Fit After 60 — matches the original Wix design.
+   Original fonts (Brandon Grotesque Light, Avenir Light) are licensed to Wix sites only;
+   Josefin Sans Light and Nunito Sans Light are the closest free equivalents. */
+:root{--teal:#2E7D8B;--offwhite:#FBFBFB;--sand:#EFECE2;--ink:#000;--btnText:#1F535D;--red:#FF4040}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:'Atkinson Hyperlegible',Arial,Helvetica,sans-serif;font-size:20px;line-height:1.6;color:var(--ink);background:var(--bg)}
-img{max-width:100%;height:auto;display:block}
-a{color:var(--teal)}
-a:hover{color:var(--teal-dark)}
-h1,h2,h3{line-height:1.2;margin:0 0 .5em;color:var(--teal-dark);text-wrap:balance}
-h1{font-size:clamp(34px,5vw,52px)}
-h2{font-size:clamp(28px,3.6vw,38px)}
-h3{font-size:24px}
-p{margin:0 0 1em;text-wrap:pretty}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-.skip{position:absolute;left:-9999px}
-.skip:focus{left:16px;top:16px;background:#fff;padding:12px;z-index:10}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Nunito Sans',Avenir,'Avenir Next',Helvetica,Arial,sans-serif;font-weight:300}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+.display{font-family:'Josefin Sans','Brandon Grotesque',Helvetica,Arial,sans-serif;font-weight:300}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
 
 /* Header */
-.site-header{border-bottom:1px solid var(--line);background:#fff;position:relative;z-index:5}
-.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
-.brand{font-weight:700;font-size:26px;color:var(--teal-dark);text-decoration:none;letter-spacing:.01em}
-.brand span{color:#B5650B}
-.header-call{font-weight:700;text-decoration:none;font-size:20px;white-space:nowrap}
-.nav{background:var(--teal)}
-.nav ul{list-style:none;margin:0 auto;padding:0 12px;display:flex;flex-wrap:wrap;justify-content:center;max-width:var(--max)}
-.nav a{display:block;color:#fff;text-decoration:none;padding:12px 16px;font-size:18px}
-.nav a:hover,.nav a[aria-current="page"]{background:var(--teal-dark);text-decoration:underline}
+header{background:#fff;padding:22px 0 10px}
+.site-title{text-align:center;font-size:40px;line-height:54px;letter-spacing:.02em;margin:0;text-decoration:none;display:block}
+.rule{border:0;border-top:1px solid #9a9a9a;max-width:980px;margin:8px auto 6px}
+nav{display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap;max-width:980px;margin:0 auto;position:relative;padding:0 50px}
+nav a{text-decoration:none;font-size:16px;padding:6px 10px;color:#131313}
+nav a:hover{text-decoration:underline}
+.fb{position:absolute;right:0;top:50%;transform:translateY(-50%);width:24px;height:24px}
 
-/* Buttons */
-.btn{display:inline-block;background:var(--sun);color:#1A1A1A;font-weight:700;text-decoration:none;padding:16px 28px;border-radius:999px;font-size:20px;border:2px solid var(--sun);min-height:56px;cursor:pointer;font-family:inherit}
-.btn:hover{background:#E8952A;border-color:#E8952A;color:#1A1A1A}
-.btn-outline{background:transparent;border-color:var(--teal);color:var(--teal)}
-.btn-outline:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
-.btn-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+/* Teal sections */
+.teal{background:var(--teal);color:#fff;text-align:center}
+.hero{padding:56px 20px 64px}
+.hero h1{font-size:48px;line-height:1.35;margin:0}
+.coach{padding:46px 20px 70px}
+.pill{display:inline-block;background:#E4E9EA;color:var(--btnText);font-family:Arial,Helvetica,sans-serif;font-size:22px;letter-spacing:1.4px;text-decoration:none;padding:10px 34px;border-radius:40px}
+.pill:hover{background:#fff}
+.coach h2{font-size:50px;margin:34px 0 4px;line-height:1.35}
+.coach h3{font-size:37px;margin:0 0 30px;line-height:1.35}
+.coach .video{max-width:469px;margin:0 auto 40px}
+.coach p{font-size:22px;line-height:1.67;max-width:560px;margin:0 auto 10px}
+.outline-btn{display:inline-block;margin-top:24px;border:1px solid #fff;color:#fff;text-decoration:none;font-size:18px;padding:10px 40px}
+.outline-btn:hover{background:#fff;color:var(--teal)}
 
-/* Sections */
-section{padding:64px 0}
-.alt{background:var(--cream)}
-.teal-band{background:var(--teal);color:#fff}
-.teal-band h2,.teal-band h3{color:#fff}
-.teal-band a{color:#fff}
-.lead{font-size:23px;color:var(--muted)}
-.eyebrow{display:inline-block;background:var(--sun-soft);color:#7A4507;font-weight:700;font-size:16px;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:6px;margin-bottom:14px}
+/* About */
+.about{background:var(--offwhite);text-align:center;padding:60px 20px 40px}
+.about h2,.reviews h2{font-size:50px;margin:0 0 40px;line-height:1.35}
+.about h4{font-size:22px;font-weight:700;margin:28px 0 6px}
+.about p{font-size:18px;line-height:1.75;max-width:780px;margin:0 auto}
+.about .sample{font-size:21px;font-weight:700;margin-top:30px}
+.about .video{max-width:640px;margin:18px auto 0}
 
-/* Hero */
-.hero{padding:56px 0 64px;background:linear-gradient(180deg,var(--teal-soft),#fff)}
-.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
-.hero-photo{border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(20,63,60,.18);max-width:420px;justify-self:center}
-.hero-points{list-style:none;padding:0;margin:0 0 28px}
-.hero-points li{padding-left:34px;position:relative;margin-bottom:8px}
-.hero-points li::before{content:"";position:absolute;left:4px;top:.45em;width:18px;height:10px;border-left:4px solid var(--teal);border-bottom:4px solid var(--teal);transform:rotate(-45deg)}
-.offer{background:var(--sun-soft);border:2px solid var(--sun);border-radius:var(--radius);padding:14px 18px;font-weight:700;margin-bottom:24px}
+/* Reviews */
+.reviews{background:var(--offwhite);padding:40px 20px 70px}
+.reviews h2{text-align:center}
+.review{display:grid;grid-template-columns:310px 1fr;gap:40px;max-width:940px;margin:0 auto 60px;align-items:start}
+.review .media{justify-self:center}
+.review .text{font-size:18px;line-height:1.7;padding-top:24px}
+.review .text p{margin:0}
+.review .text ul{margin:0;padding-left:22px}
+.review .name{margin-top:22px;font-size:16px}
+.show-more{text-align:center;font-size:23px}
+.show-more a{text-decoration:none;border-bottom:1px solid #000}
 
-/* Cards */
-.grid{display:grid;gap:24px}
-.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column}
-.card h3{margin-bottom:.3em}
-.card .price{font-size:22px;font-weight:700;color:var(--ink);margin:.2em 0 .6em}
-.card .more{margin-top:auto;font-weight:700}
+/* Video */
+.video video{width:100%;height:auto;background:#000}
 
-/* Schedule tables */
-table{width:100%;border-collapse:collapse;margin:0 0 1.2em;font-size:20px;background:#fff}
-th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
-th{background:var(--teal-soft);color:var(--teal-dark)}
-
-/* Testimonials */
-.quote{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin:0}
-.quote p{font-size:20px}
-.quote footer{font-weight:700;color:var(--teal-dark)}
-.quote footer::before{content:"— "}
-.quote .tag{display:inline-block;font-size:15px;font-weight:700;background:var(--teal-soft);color:var(--teal-dark);border-radius:6px;padding:2px 10px;margin-bottom:10px}
-.quotes{columns:2;column-gap:24px}
-.quotes .quote{break-inside:avoid;margin-bottom:24px}
-
-/* Coach */
-.coach{display:grid;grid-template-columns:320px 1fr;gap:40px;align-items:start}
-.coach img{border-radius:var(--radius)}
-
-/* Priorities */
-.priority{display:flex;gap:18px;align-items:flex-start}
-.priority .num{flex:0 0 52px;height:52px;border-radius:50%;background:var(--teal);color:#fff;font-weight:700;font-size:24px;display:flex;align-items:center;justify-content:center}
-
-/* FAQ */
-details{border:1px solid var(--line);border-radius:var(--radius);padding:4px 22px;margin-bottom:14px;background:#fff}
-summary{cursor:pointer;font-weight:700;font-size:21px;padding:14px 0;color:var(--teal-dark)}
-details[open] summary{border-bottom:1px solid var(--line);margin-bottom:12px}
-
-/* Contact form */
-.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
-form label{display:block;font-weight:700;margin:0 0 6px}
-form .field{margin-bottom:18px}
-input,select,textarea{width:100%;font:inherit;font-size:20px;padding:14px;border:2px solid #8FA3A0;border-radius:10px;background:#fff;color:var(--ink)}
-input:focus,select:focus,textarea:focus,.btn:focus,a:focus{outline:3px solid var(--sun);outline-offset:2px}
-textarea{min-height:120px}
+/* Contact */
+.contact{background:var(--sand);padding:60px 20px 70px}
+.contact h2{font-size:50px;margin:0 0 30px;line-height:1.35}
+.contact .intro{text-align:center;font-size:22px;line-height:1.8}
+.contact .offer{color:var(--red);text-align:center;font-size:28px;line-height:1.4;margin:16px auto 26px;max-width:640px}
+.contact .email{font-size:15px;margin-bottom:6px}
+form .line{width:100%;border:0;border-bottom:1px solid #000;background:transparent;font:inherit;font-size:16px;padding:12px 4px;margin-bottom:6px;color:#000}
+form textarea.line{min-height:110px;resize:vertical}
+form .line:focus{outline:2px solid var(--teal);outline-offset:2px}
+form button{width:100%;background:#000;color:#fff;border:0;font:inherit;font-size:16px;padding:14px;cursor:pointer;margin-top:20px}
+form button:hover{background:#333}
 .hp{position:absolute;left:-9999px}
-.form-card{background:#fff;color:var(--ink);border-radius:var(--radius);padding:30px}
-.form-card h3{color:var(--teal-dark)}
-.form-note{font-size:17px;color:var(--muted)}
-.form-status{font-weight:700;margin-top:12px}
-.contact-list{list-style:none;padding:0;margin:0 0 24px}
-.contact-list li{margin-bottom:12px}
-.big-phone{font-size:30px;font-weight:700;text-decoration:none}
+.form-status{text-align:center;font-weight:700;min-height:1em}
+.cheer{max-width:940px;margin:36px auto 0}
 
-/* Footer */
-.site-footer{background:var(--teal-dark);color:#E9F1EF;padding:40px 0;font-size:18px}
-.site-footer a{color:#fff}
-.site-footer .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
-.site-footer h2{color:#fff;font-size:22px}
-.site-footer ul{list-style:none;padding:0;margin:0}
-.site-footer li{margin-bottom:6px}
-.copyright{text-align:center;font-size:16px;margin-top:28px;color:#C7D6D3}
+footer{text-align:center;font-size:14px;padding:50px 20px}
 
-@media (max-width:860px){
-  body{font-size:19px}
-  .hero .wrap,.coach,.contact,.grid-3,.grid-2,.site-footer .wrap{grid-template-columns:1fr}
-  .quotes{columns:1}
-  .coach img{max-width:320px}
-  section{padding:48px 0}
-  .header-call{font-size:18px}
+@media (max-width:760px){
+  .site-title{font-size:30px}
+  .hero h1{font-size:32px}
+  .coach h2,.about h2,.reviews h2,.contact h2{font-size:36px}
+  .coach h3{font-size:28px}
+  .pill{font-size:17px;padding:10px 20px}
+  .review{grid-template-columns:1fr;gap:10px}
+  .review .text{padding-top:0}
+  nav{padding:0 10px}
+  .fb{position:static;transform:none}
 }

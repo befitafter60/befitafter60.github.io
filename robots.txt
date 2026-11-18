@@ -1,4 +1,3 @@
-# Welcome, search engines and AI assistants.
 User-agent: *
 Allow: /
 Disallow: /thanks.html
