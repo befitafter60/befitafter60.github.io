@@ -68,7 +68,7 @@ form button{width:100%;background:#000;color:#fff;border:0;font:inherit;font-siz
 form button:hover{background:#333}
 .hp{position:absolute;left:-9999px}
 .form-status{text-align:center;font-weight:700;min-height:1em}
-.cheer{max-width:940px;margin:36px auto 0}
+.cheer{width:100%;max-width:940px;margin:36px auto 0}
 
 footer{text-align:center;font-size:14px;padding:50px 20px}
 
